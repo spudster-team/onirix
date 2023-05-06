@@ -64,7 +64,7 @@ li a {
     color: var(--main-color);
 }
 
-li a:hover {
+footer li a:hover {
     border-bottom: 2px solid;
 }
 
