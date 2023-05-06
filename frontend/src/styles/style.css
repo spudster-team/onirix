@@ -19,6 +19,10 @@ h3 {
     margin-bottom: 3rem;
 }
 
+h2 {
+    font-size: 2.2rem;
+}
+
 body {
     background-color: var(--main-color);
     color: white;
