@@ -4,3 +4,8 @@
     transition: all .2s ease-in-out;
     background-color: #e9c454;
 }
+
+.button {
+    margin: 1rem;
+    box-sizing: border-box;
+}

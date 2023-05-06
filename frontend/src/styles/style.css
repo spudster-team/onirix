@@ -16,11 +16,11 @@ h2,
 h3 {
     font-family: "Aloevera-Bold";
     letter-spacing: .2rem;
-    margin-bottom: 3rem;
 }
 
 h2 {
     font-size: 2.2rem;
+    margin-bottom: 3rem;
 }
 
 body {
@@ -36,6 +36,12 @@ span {
 
 main {
     margin-left: 5rem;
+}
+
+@media only screen and (max-width:600px) {
+    main {
+        margin-left: inherit;
+    }
 }
 
 section {
