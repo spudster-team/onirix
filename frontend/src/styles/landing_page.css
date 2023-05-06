@@ -72,6 +72,10 @@
         order: 1;
     }
 
+    video {
+        filter: grayscale(0) !important;
+    }
+
     #onirix-summary,
     #iir-summary {
         text-align: justify;

@@ -59,7 +59,7 @@ const Navbar = () => {
         <li className="nav-item navbar-logo">
             <NavLink className={"nav-link"} to="/" onClick={handleLinkClick}>
                 <span className="link-text logo-text display-none">ONIRIX</span>
-                <img src="/site.png" alt="logo" />
+                <img src="/assets/logo/logo-partial.svg" alt="logo" />
             </NavLink>
         </li>
         <li className="nav-item">

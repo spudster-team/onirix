@@ -18,7 +18,11 @@ const Home = () => {
                         <a href="onirix_prediction.html" className="button">Essayer</a>
                         <a href="onirix_info.html">En savoir plus</a>
                     </div>
-                    <img src="#" alt="" className="landing-page-illustration" />
+                    <video autoPlay muted loop className="landing-page-illustration">
+                        {/* <source src='/assets/video/tunnel.mp4' type='video/mp4'></source> */}
+                        <source src='/assets/video/wormhole.mp4' type='video/mp4'></source>
+                    </video>
+                    {/* <img src="#" alt="" className="landing-page-illustration" /> */}
                 </article>
                 <article id="iir-summary" className="summary">
                     <img src="/assets/iir.jpg" alt="iir building" className="landing-page-illustration" />
@@ -35,7 +39,7 @@ const Home = () => {
                 </article>
             </section>
             <section>
-                <h2>Ce que les gens disent de nous</h2>
+                <h2 id='testimonial-title'>Ce que les gens disent de nous</h2>
                 <article className="testimonial">
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
