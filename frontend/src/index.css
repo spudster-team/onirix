@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "inter-regular";
+  src: url("/public/fonts/inter/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Aloevera-bold";
+  src: url("/public/fonts/Aloevera-Bold.otf");
+}
+
 :root {
   --transition-speed: 600ms;
 }
