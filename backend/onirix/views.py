@@ -111,5 +111,5 @@ class History(APIView):
             user = User.objects.get(pk=request.user.id)
             dream_history = Dream.objects.filter(id_user=user)
             history_serializer = HistorySerializer(dream_history, many=True)
-            return Response(history_serializer.data)
+            return Response(history_serializer.data, status=status.HTTP_200_OK)
         return Response("user is not authenticated", status=status.HTTP_400_BAD_REQUEST)
