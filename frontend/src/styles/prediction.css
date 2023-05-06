@@ -1,0 +1,61 @@
+@import url('colors.css');
+
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-he */
+}
+
+textarea {
+    background-color: var(--gray);
+    border-radius: 10px;
+    width: 100%;
+}
+
+#result p {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.additional-info {
+    box-sizing: border-box;
+    margin: 1rem;
+}
+
+.additional-info div {
+    background-color: var(--gray);
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.additional-info .button {
+    position: absolute;
+    bottom: 0;
+}
+
+.additional-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .additional-info-container {
+        /* flex-direction: column; */
+    }
+}

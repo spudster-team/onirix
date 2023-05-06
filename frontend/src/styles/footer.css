@@ -14,6 +14,23 @@ footer {
     padding-left: 5rem;
 }
 
+footer img {
+    width: 70px;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo-container > div h3{
+    text-align: left;
+}
+
+#logo-container div {
+    margin: 1rem;
+}
+
 footer article {
     display: flex;
     justify-content: center;

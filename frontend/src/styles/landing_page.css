@@ -8,9 +8,9 @@
     transition: all .2s ease;
 }
 
-.summary {
+/* .summary {
     position: relative;
-}
+} */
 
 .landing-page-illustration:hover {
     filter: grayscale(0);
@@ -54,22 +54,30 @@
         flex-direction: column;
     }
 
-    .summary div {
+    .summary  div {
+        order: 2;
         width: 100%;
         max-width: 100%;
+    }
+
+    .summary {
+        margin-bottom: 3rem;
     }
 
     .landing-page-illustration {
         margin-left: auto;
         margin-right: auto;
+        height: 100px;
+        width: 100%;
+        order: 1;
+    }
+
+    video {
+        filter: grayscale(0) !important;
     }
 
     #onirix-summary,
     #iir-summary {
         text-align: justify;
-    }
-
-    #iir-summary {
-        flex-direction: column-reverse;
     }
 }

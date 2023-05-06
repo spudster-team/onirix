@@ -3,9 +3,9 @@ import React from 'react'
 
 const Orinix = () => {
     return (
-        <div>
+        <main>
             <h1>Orinix</h1>
-        </div>
+        </main>
     )
 }
 
