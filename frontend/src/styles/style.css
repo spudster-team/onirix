@@ -6,6 +6,11 @@
 @import url('button.css');
 @import url('landing_page.css');
 
+::selection {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+}
+
 h1,
 h2,
 h3 {
