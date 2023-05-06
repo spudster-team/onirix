@@ -5,6 +5,7 @@
 @import url('footer.css');
 @import url('button.css');
 @import url('landing_page.css');
+@import url('navbar.css');
 
 ::selection {
     background-color: var(--accent-color);
@@ -58,4 +59,9 @@ a {
     color: white;
     font-family: 'Inter-Regular', 'Sans Serif';
     font-weight: 500;
+}
+
+.blur {
+    -webkit-filter: blur(8px);
+    filter: blur(15px);
 }

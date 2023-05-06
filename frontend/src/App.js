@@ -11,9 +11,11 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+
   return (
     <BrowserRouter>
       <Navbar/>
+      <div id="container">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/orinix" element={<Orinix />} />
@@ -22,7 +24,9 @@ function App() {
           <Route path="/a_propos" element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-      <Footer/>
+      
+        <Footer/>
+      </div>
     </BrowserRouter>
   );
 }
