@@ -97,3 +97,19 @@ class DreamView(APIView):
                 return Response(result, status=status.HTTP_200_OK)
         else:
             return Response(dream_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class HistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dream
+        fields = ["description", "prediction"]
+
+
+class History(APIView):
+    def get(self, request):
+        if request.user.is_authenticated:
+            user = User.objects.get(pk=request.user.id)
+            dream_history = Dream.objects.filter(id_user=user)
+            history_serializer = HistorySerializer(dream_history, many=True)
+            return Response(history_serializer.data)
+        return Response("user is not authenticated", status=status.HTTP_400_BAD_REQUEST)
