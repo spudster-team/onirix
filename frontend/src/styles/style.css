@@ -14,7 +14,7 @@
 h1,
 h2,
 h3 {
-    font-family: "Aloevera";
+    font-family: "Aloevera-Bold";
     letter-spacing: .2rem;
     margin-bottom: 3rem;
 }
@@ -27,7 +27,7 @@ body {
 
 p,
 span {
-    font-family: 'Inter', 'Sans Serif';
+    font-family: 'Inter-Regular', 'Sans Serif';
 }
 
 main {
@@ -52,6 +52,6 @@ section {
 a {
     text-decoration: none;
     color: white;
-    font-family: 'Inter', 'Sans Serif';
+    font-family: 'Inter-Regular', 'Sans Serif';
     font-weight: 500;
 }
