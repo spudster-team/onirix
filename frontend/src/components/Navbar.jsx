@@ -51,30 +51,30 @@ const Navbar = () => {
         <li className="nav-item navbar-logo">
             <NavLink className={"nav-link nav-link-logo"} to="/" onClick={handleLinkClick}>
                 <span className="link-text logo-text display-none">ONIRIX</span>
-                <img src="/site.png" alt="logo" />
+                <img src="/assets/site.png" alt="logo" />
             </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/orinix" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/adresse.png" className="nav-img" alt="icon" />
             <span className="link-text display-none">Onirix</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/iir" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/adresse.png" className="nav-img" alt="icon" />
             <span className="link-text display-none">Institut Iternational des Rêves</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/a_propos" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/adresse.png" className="nav-img" alt="icon" />
             <span className="link-text display-none">A propos</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/contact" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/adresse.png" className="nav-img" alt="icon" />
             <span className="link-text display-none">contact</span>
           </NavLink>
         </li>

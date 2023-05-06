@@ -13,6 +13,10 @@ import Footer from './components/Footer';
 function App() {
 
   return (
+    /**
+     * TODO : addn basename='/frontend' to BrowserRouter
+     */
+    //<BrowserRouter basename='/frontend'>
     <BrowserRouter>
       <Navbar/>
       <div id="container">

@@ -1,6 +1,8 @@
 import React from 'react'
 
-
+/**
+ * TODO : remove / before image url
+ */
 const Home = () => {
     return (
         <main>
@@ -40,20 +42,20 @@ const Home = () => {
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
-                    <div><img src="assets/man1.jpg" alt="user" /><span className="testimonial-username">John Wick</span>
+                    <div><img src="/assets/man1.jpg" alt="user" /><span className="testimonial-username">John Wick</span>
                     </div>
                 </article>
                 <article className="testimonial">
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
-                    <div><img src="assets/man2.jpg" alt="" /><span className="testimonial-username">John Wick</span></div>
+                    <div><img src="/assets/man2.jpg" alt="" /><span className="testimonial-username">John Wick</span></div>
                 </article>
                 <article className="testimonial">
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
-                    <div><img src="assets/woman1.jpg" alt="" /><span className="testimonial-username">John Wick</span></div>
+                    <div><img src="/assets/woman1.jpg" alt="" /><span className="testimonial-username">John Wick</span></div>
                 </article>
             </section>
         </main>
