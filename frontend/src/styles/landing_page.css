@@ -3,6 +3,22 @@
     height: 40vh;
     object-fit: cover;
     border-radius: 10px;
+    margin: 1rem;
+    filter: grayscale(1);
+    transition: all .2s ease;
+}
+
+.summary {
+    position: relative;
+}
+
+.landing-page-illustration:hover {
+    filter: grayscale(0);
+    transition: all .2s ease;
+}
+
+.landing-page-illustration:hover {
+    background-color: yellow;
 }
 
 .landing-page article {
@@ -13,8 +29,47 @@
     text-align: right;
 }
 
+.summary p {
+    margin: 1rem;
+}
+
+.summary div {
+    max-width: 50vw;
+}
+
 .landing-page {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+}
+
+.summary span {
+    border-bottom: .3rem solid var(--accent-color);
+}
+
+/* RESPONSIVeNESS */
+
+@media screen and (max-width: 600px) {
+    .landing-page article {
+        flex-direction: column;
+    }
+
+    .summary div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .landing-page-illustration {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #onirix-summary,
+    #iir-summary {
+        text-align: justify;
+    }
+
+    #iir-summary {
+        flex-direction: column-reverse;
+    }
 }

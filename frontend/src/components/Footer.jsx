@@ -9,7 +9,7 @@ const Footer = () => {
                 <p>La prédiction de votre avenir</p>
             </div>
             <div>
-                <h3>Service</h3>
+                <h3>Services</h3>
                 <ul>
                     <li><a href="onirix_prediction.html">Prédiction</a></li>
                     <li><a href="#">À propos</a></li>
