@@ -3,7 +3,9 @@ from rest_framework import serializers, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from onirix.models import Dream, AdditionalInfo
+from onirix.models import AdditionalInfo, Dream
+from onirix.utils.additional_info import search_on_youtube, search_book
+from onirix.utils.info import gener_random_response
 
 
 # Create your views here.
@@ -26,8 +28,9 @@ class UserView(APIView):
         user_serializer = UserInputSerializer(data=request.data)
 
         if user_serializer.is_valid():
-            if User.objects.filter(email=user_serializer.validated_data["email"], username=user_serializer.validated_data["username"]).exists():
-                return Response({"email": ["email déja utilisé"]})
+            if User.objects.filter(email=user_serializer.validated_data["email"],
+                                   username=user_serializer.validated_data["username"]).exists():
+                return Response({"message": ["username or email have been used"]})
             user = user_serializer.save()
             data = {
                 "username": user.username,
@@ -50,39 +53,47 @@ class UserView(APIView):
 
 
 class DreamSerializer(serializers.Serializer):
-    description = "description"
+    description = serializers.CharField(max_length=255)
 
 
 class DreamView(APIView):
     def post(self, request):
         dream_serializer = DreamSerializer(data=request.data)
+
         if dream_serializer.is_valid():
-            # Todo get some information from api
+            result = gener_random_response()
+            keyword = result["keywords"][0]
+            youtube_videos = search_on_youtube(keyword)
+            books = search_book(keyword)
+
+            result["additional_info"] = youtube_videos + books
+
             if request.user.is_authenticated:
-                # if user is authenticated : save dream and additional info into database
                 user = User.objects.get(pk=request.user.id)
 
                 dream = Dream.objects.create(
-                    description="description",
-                    prediction="prediction",
+                    description=dream_serializer.validated_data["description"],
+                    prediction=result["prediction"],
                     id_user=user
                 )
 
-                additional_info = AdditionalInfo.objects.create(
-                    link="link",
-                    title="title",
-                    type="title",
-                    id_dream=dream
-                )
+                for info_video, info_book in zip(youtube_videos, books):
+                    AdditionalInfo.objects.create(
+                        link=info_video["link"],
+                        title=info_video["title"],
+                        type=info_video["type"],
+                        image=info_video["thumbnail"],
+                        id_dream=dream
+                    )
 
-                data = {
-                    "description": dream.description,
-                    "prediction": dream.prediction,
-                    "additinal_info": [],
-                }
-                return Response(data, status=status.HTTP_201_CREATED)
+                    AdditionalInfo.objects.create(
+                        title=info_book["title"],
+                        type=info_book["type"],
+                        id_dream=dream
+                    )
+
+                return Response(result, status=status.HTTP_201_CREATED)
             else:
-                data = {"test": "some test"}
-                return Response(data, status=status.HTTP_200_OK)
+                return Response(result, status=status.HTTP_200_OK)
         else:
             return Response(dream_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
