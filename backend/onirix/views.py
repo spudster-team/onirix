@@ -26,7 +26,7 @@ class UserView(APIView):
         user_serializer = UserInputSerializer(data=request.data)
 
         if user_serializer.is_valid():
-            if User.objects.filter(email=user_serializer.validated_data["email"]).exists():
+            if User.objects.filter(email=user_serializer.validated_data["email"], username=user_serializer.validated_data["username"]).exists():
                 return Response({"email": ["email déja utilisé"]})
             user = user_serializer.save()
             data = {
@@ -38,7 +38,7 @@ class UserView(APIView):
         return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request):
-        if request.user.is_autheticated:
+        if request.user.is_authenticated:
             user = User.objects.get(pk=request.user.id)
             data = {
                 "username": user.username,
@@ -58,7 +58,7 @@ class DreamView(APIView):
         dream_serializer = DreamSerializer(data=request.data)
         if dream_serializer.is_valid():
             # Todo get some information from api
-            if request.user.is_autheticated:
+            if request.user.is_authenticated:
                 # if user is authenticated : save dream and additional info into database
                 user = User.objects.get(pk=request.user.id)
 
