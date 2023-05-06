@@ -1,0 +1,20 @@
+.landing-page-illustration {
+    width: 50vw;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.landing-page article {
+    display: flex;
+}
+
+#iir-summary {
+    text-align: right;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}

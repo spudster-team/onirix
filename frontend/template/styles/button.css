@@ -1,0 +1,6 @@
+@import url('colors.css');
+
+.button:hover {
+    transition: all .2s ease-in-out;
+    background-color: #e9c454;
+}
