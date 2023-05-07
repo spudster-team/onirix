@@ -96,8 +96,8 @@ const Navbar = ({hostname}) => {
       <ul className="navbar-nav">
         <li id="exact-path" className={active === 0 ? "nav-item navbar-logo active" : "nav-item navbar-logo"}>
             <NavLink className={"nav-link nav-link-logo"} to="/" onClick={handleLinkClick}>
-                <span className="link-text logo-text display-none">ONIRIX</span>
-                <img src={hostname + "/assets/logo/logo-partial.svg"} alt="logo" />
+                <span className="link-text logo-text display-none">ONYRIX</span>
+                <img src="/assets/logo/logo-partial.svg" alt="logo" />
             </NavLink>
         </li>
         <li className={active === 1 ? "nav-item active" : "nav-item"}>

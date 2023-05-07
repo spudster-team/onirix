@@ -92,6 +92,9 @@ const Home = ({hostname}) => {
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
                     <div><img src={hostname + "/assets/woman1.jpg"} alt="" /><span className="testimonial-username">John Wick</span></div>
                 </article>
+                <p></p>
+                <h2>Comment ça marche</h2>
+                <p> &emsp; Vous pouvez naviguer sur le site et tester ses fonctionnalités sans même vous inscrire. Toutefois, nous vous recommandons de créer un compte pour bénéficier de l'accès à votre historique d'utilisation. Les utilisateurs connectés ont également accès à des fonctionnalités exclusives et des options de personnalisation. Pour vous inscrire, il vous suffit de cliquer sur le bouton "Inscription" et de remplir le formulaire. Nous espérons que vous apprécierez votre expérience sur notre site et n'hésitez pas à nous contacter si vous avez des questions ou des commentaires.</p>
             </section>
         </main>
     )

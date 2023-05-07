@@ -10,10 +10,10 @@ const Footer = ({hostname}) => {
         <footer id="#contact">
             <article>
                 <div id="logo-container">
-                    <img src={pathname + "/assets/logo/logo-full-white.png"} alt="onirix_logo" className="logo" />
+                    <img src={pathname + "/assets/logo/logo-full-white.png"} alt="oniryx_logo" className="logo" />
                     <div>
-                        <h3>ONIRIX</h3>
-                        <p>Découvrez votre avenir à travers vos rêves avec Onirix, l'IA divinatoire.</p>
+                        <h3>ONYRIX</h3>
+                        <p>Découvrez votre avenir à travers vos rêves avec Onyrix, l'IA divinatoire.</p>
                     </div>
                 </div>
                 <div>

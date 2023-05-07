@@ -82,8 +82,23 @@ video:hover {
 
 
 
-    #onirix-summary,
+    #onyrix-summary,
     #iir-summary {
         text-align: justify;
     }
+}
+
+.testimonial-help {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.testimonial-help h2 {
+    margin: 1.5rem;
+}
+
+.testimonial-help p:last-of-type {
+    max-width: 1000px;
 }
