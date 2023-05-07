@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = ({hostname}) => {
+const Navbar = () => {
   const [mainSelector, setMainSelector] = useState(null);
   const [linkTextSelector, setLinkTextSelector] = useState(null);
   const [navbarSelector, setNavbarSelector] = useState(null);
@@ -102,31 +102,31 @@ const Navbar = ({hostname}) => {
         </li>
         <li className={active === 1 ? "nav-item active" : "nav-item"}>
           <NavLink className={"nav-link"} to="/prediction" onClick={handleLinkClick}>
-            <img src={hostname + "/assets/icons/predict-white.svg"} className="nav-img" alt="icon" />
+            <img src={"/assets/icons/predict-white.svg"} className="nav-img" alt="icon" />
             <span className="link-text display-none">Predire</span>
           </NavLink>
         </li>
         <li className={active === 2 ? "nav-item active" : "nav-item"}>
           <NavLink className={"nav-link"} to="/iir" onClick={handleLinkClick}>
-            <img src={hostname + "/assets/icons/iir-white.svg"} className="nav-img" alt="icon" />
+            <img src={"/assets/icons/iir-white.svg"} className="nav-img" alt="icon" />
             <span className="link-text display-none">Institut Iternational des Rêves</span>
           </NavLink>
         </li>
         <li className={active === 3 ? "nav-item active" : "nav-item"}>
           <NavLink className={"nav-link"} to="/a_propos" onClick={handleLinkClick}>
-            <img src={hostname + "/assets/icons/about-white.svg"} className="nav-img" alt="icon" />
+            <img src={"/assets/icons/about-white.svg"} className="nav-img" alt="icon" />
             <span className="link-text display-none">A propos</span>
           </NavLink>
         </li>
         <li className={active === 4 ? "nav-item active" : "nav-item"}>
           <NavLink className={"nav-link"} to="/#contact" onClick={handleLinkClick}>
-            <img src={`${hostname}/assets/icons/contact-white.svg`} className="nav-img" alt="icon" />
+            <img src={`/assets/icons/contact-white.svg`} className="nav-img" alt="icon" />
             <span className="link-text display-none">Contact</span>
           </NavLink>
         </li>
         <li className={active === 5 ? "nav-item active" : "nav-item"}>
           <NavLink className={"nav-link"} to="/login" onClick={handleLinkClick}>
-            <img src={`${hostname}/assets/icons/contact-white.svg`} className="nav-img" alt="icon" />
+            <img src={`/assets/logo/logo-full.svg`} className="nav-img" alt="icon" />
             <span className="link-text display-none">Login</span>
           </NavLink>
         </li>

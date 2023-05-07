@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Resultats from './Resultats';
 
 
-const Prediction = ({ hostname }) => {
+const Prediction = () => {
 
 
     const [disabled, setDisabled] = useState(true);
@@ -68,7 +68,7 @@ const Prediction = ({ hostname }) => {
                 </form>
                 {loading &&
                     <div className='loading'>
-                        <img src={hostname + "/assets/loading-dot.gif"} alt="loading" />
+                        <img src={"/assets/loading-dot.gif"} alt="loading" />
                     </div>
                 }
             </section>
