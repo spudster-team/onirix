@@ -20,7 +20,7 @@ form input {
 }
 
 .signin-container {
-    position: relative; 
+    position: relative;
     width: 80vw;
     height: 90vh;
     margin-left: auto;
@@ -58,4 +58,27 @@ form a {
 
 form a:hover {
     border-bottom: 2px solid --accent-color;
+}
+
+@media only screen and (max-width:600px) {
+    .form-decoration {
+        display: none;
+    }
+    .signin-container form {
+        width: 100%;
+        border-radius: 10px;
+        padding: 1rem;
+        min-height: 70vh;
+    }
+
+    .signin-container {
+        width: 95%;
+        min-height: 60vh;
+    }
+
+    .small-screen-logo {
+        display: block;
+        width: 100px;
+        margin-bottom: 2rem;
+    }
 }
