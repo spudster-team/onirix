@@ -7,7 +7,7 @@ const Footer = () => {
                     <img src="/assets/logo/logo-full-white.png" alt="onirix_logo" className="logo" />
                     <div>
                         <h3>ONIRIX</h3>
-                        <p>La prédiction de votre avenir</p>
+                        <p>Découvrez votre avenir à travers vos rêves avec Onirix, l'IA divinatoire.</p>
                     </div>
                 </div>
                 <div>
@@ -28,7 +28,7 @@ const Footer = () => {
             </article>
             <hr />
             <p className="copyright">
-                &copy; 2023 - Spudster
+                &copy; 2023 - Made with 🧠 by Spudster
             </p>
         </footer>
     );

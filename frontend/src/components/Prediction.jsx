@@ -59,7 +59,7 @@ const Prediction = () => {
                 </h2>
                 <form action="">
                     <h3>Décrivez votre rêve</h3>
-                    <textarea name="" 
+                    <textarea name=""
                     id="" 
                     cols="30"
                     rows="10" 

@@ -13,7 +13,7 @@ const Resultats = ({predictions, additionnal_info}) => {
                             <article key={index} className='additional-info'>
                                 <h4>{info.type}</h4>
                                 <div>
-                                    <p>{info.title}</p>
+                                    <p class='additional-info-title'>{info.title}</p>
                                     <a href={"http://google.com?search=" + info.title} className="button">Consulter</a>
                                 </div>
                             </article>
@@ -23,7 +23,7 @@ const Resultats = ({predictions, additionnal_info}) => {
                                 <article key={index} className='additional-info'>
                                     <h4>{info.type}</h4>
                                     <div>
-                                        <p>{info.title}</p>
+                                        <p class='additional-info-title'>{info.title}</p>
                                         <img src={info.thumbnail} alt={info.title}/>
                                         <a href={info.link} className="button">Consulter</a>
                                     </div>
