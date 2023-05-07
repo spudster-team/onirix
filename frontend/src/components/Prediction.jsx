@@ -55,13 +55,13 @@ const Prediction = () => {
     }
 
     return (
-        <main>
+        <main className='prediction'>
             <section id='form'>
-                <h2>Onirix, une plateforme pour prédire l'avenir à partir de vos rêves.
+                <h2>Obtenez des prédiction prémonitoires personalisées grâce à Onirix
                 </h2>
                 <form action="">
                     <h3>Décrivez votre rêve</h3>
-                    <textarea name="" 
+                    <textarea name=""
                     id="" 
                     cols="30"
                     rows="10" 

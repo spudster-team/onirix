@@ -1,8 +1,8 @@
 @import url('colors.css');
 
-h2,
-h3,
-h4 {
+.prediction h2,
+.prediction h3,
+.prediction h4 {
     text-align: center;
 }
 
@@ -16,15 +16,21 @@ form {
     /* min-he */
 }
 
+#form {
+    min-height: fit-content !important;
+}
+
 textarea {
     background-color: var(--gray);
     border-radius: 10px;
     width: 100%;
     font-size: 1rem;
+    font-family: 'Inter';
     border: none;
     outline: none;
     padding: 1rem;
     box-sizing: border-box;
+    resize:none;
 }
 
 h3 {
@@ -53,7 +59,20 @@ textarea:focus {
     border-radius: 10px;
     position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.additional-info-title {
+    color: var(--main-color);
+    text-align: center;
+    padding: .5rem;
+}
+
+.additional-info img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
 }
 
 .additional-info .button {
