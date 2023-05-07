@@ -57,7 +57,7 @@ const Navbar = () => {
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/prediction" onClick={handleLinkClick}>
             <img src="/assets/icons/predict-white.svg" className="nav-img" alt="icon" />
-            <span className="link-text display-none">Onirix</span>
+            <span className="link-text display-none">Predire</span>
           </NavLink>
         </li>
         <li className="nav-item">
