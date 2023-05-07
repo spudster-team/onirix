@@ -9,6 +9,7 @@ import Prediction from './components/Prediction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
+import Login from './components/Login';
 
 function App() {
   const [hostname, setHostname] = useState('');
@@ -36,6 +37,7 @@ function App() {
           <Route path="/iir" element={<Iir hostname={hostname} />} />
           <Route path="/a_propos" element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       
         <Footer hostname={hostname}/>

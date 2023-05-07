@@ -36,7 +36,7 @@ const Navbar = ({hostname}) => {
       case "/a_propos":
         setActive(3);
         break;
-      case "/contact":
+      case "/#contact":
         setActive(4);
         break;
       default:
@@ -119,9 +119,15 @@ const Navbar = ({hostname}) => {
           </NavLink>
         </li>
         <li className={active === 4 ? "nav-item active" : "nav-item"}>
-          <NavLink className={"nav-link"} to="/contact" onClick={handleLinkClick}>
+          <NavLink className={"nav-link"} to="/#contact" onClick={handleLinkClick}>
             <img src={`${hostname}/assets/icons/contact-white.svg`} className="nav-img" alt="icon" />
             <span className="link-text display-none">Contact</span>
+          </NavLink>
+        </li>
+        <li className={active === 5 ? "nav-item active" : "nav-item"}>
+          <NavLink className={"nav-link"} to="/login" onClick={handleLinkClick}>
+            <img src={`${hostname}/assets/icons/contact-white.svg`} className="nav-img" alt="icon" />
+            <span className="link-text display-none">Login</span>
           </NavLink>
         </li>
       </ul>
