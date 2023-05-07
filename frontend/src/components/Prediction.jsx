@@ -5,23 +5,18 @@ import Resultats from './Resultats';
 const Prediction = ({hostname}) => {
 
 
-    //const [btnSelector, setBtnSelector] = useState(null);
+    const [disabled, setDisabled] = useState(true);
     const [text, setText] = useState('');
     const [prediction, setPrediction] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    useState(() => {
-        //setBtnSelector(document.querySelector('#btn-soumettre'));
-        //document.querySelector(btnSelector).disabled = true;
-    }, [])
-
     const handleChange = (e) => {
-        /*if(text === '') {
-            document.querySelector(btnSelector).disabled = true;
-        }else{
-            document.querySelector(btnSelector).disabled = false;
-        }*/
         setText(e.target.value);
+        if(text === '') {
+           setDisabled(true);
+        }else{
+            setDisabled(false);
+        }
     }
 
     const getPrediction = async () => {
@@ -69,7 +64,7 @@ const Prediction = ({hostname}) => {
                     value={text} onChange={handleChange}>
 
                     </textarea>
-                    <button className="button" id="btn-soumettre"  onClick={handleSubmit}>Soumettre</button>
+                    <button className="button" id="btn-soumettre" disabled={disabled}  onClick={handleSubmit}>Soumettre</button>
                 </form>
                 {loading && 
                     <div className='loading'>
