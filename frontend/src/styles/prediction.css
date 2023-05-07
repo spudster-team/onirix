@@ -108,3 +108,38 @@ textarea:focus {
         /* flex-direction: column; */
     }
 }
+
+/*  PUBLICITÉ */
+
+.pub {
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--main-color);
+    position: fixed;
+    z-index: 300;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 20px;
+    top: 2rem;
+    left: 0;
+    border: 2px solid var(--accent-color);
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+.close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

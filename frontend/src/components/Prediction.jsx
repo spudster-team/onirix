@@ -50,7 +50,14 @@ const Prediction = () => {
     }
 
     return (
-        <main className='prediction animate__animated animate__slideInRight'>
+        <main className='prediction'>
+            <div className='pub'>
+                <div className="close-button">&times;</div>
+                <p>Attention, Onyrix ne peut prédire l'avenir en se basant sur des cauchemars. Ces derniers sont
+                    considérés comme des troubles psychologiques et l'Institut International des Rêves recommende d'aller voir un professionel.
+                </p>
+                <p>Voici quelques recommendations : </p>
+            </div>
             <section id='form'>
                 <h2>Obtenez des prédiction prémonitoires personalisées grâce à Onyrix
                 </h2>
