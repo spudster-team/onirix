@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 /**
  * TODO : remove / before image url
@@ -17,8 +18,8 @@ const Home = () => {
                             ou
                             que
                             la mise en page est achevée. Généralement, on utilise un texte en faux latin.</p>
-                        <a href="onirix_prediction.html" className="button">Essayer</a>
-                        <a href="onirix_info.html">En savoir plus</a>
+                        <NavLink to="/prediction" className="button">Essayer</NavLink>
+                        <NavLink to="/a_propos">En savoir plus</NavLink>
                     </div>
                     <video autoPlay muted loop className="landing-page-illustration">
                         {/* <source src='/assets/video/tunnel.mp4' type='video/mp4'></source> */}
@@ -36,7 +37,7 @@ const Home = () => {
                             de marque • Développez un examen minutieux et une présentation aux patients qui favorisent leur
                             adhésion aux traitements suggérés
                         </p>
-                        <a href="onirix_info.html" className="button">Voir plus</a>
+                        <NavLink to="/iir" className="button">Voir plus</NavLink>
                     </div>
                 </article>
             </section>

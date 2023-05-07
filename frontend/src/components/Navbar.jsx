@@ -55,9 +55,9 @@ const Navbar = () => {
             </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className={"nav-link"} to="/orinix" onClick={handleLinkClick}>
+          <NavLink className={"nav-link"} to="/prediction" onClick={handleLinkClick}>
             <img src="/assets/adresse.png" className="nav-img" alt="icon" />
-            <span className="link-text display-none">Onirix</span>
+            <span className="link-text display-none">Predire</span>
           </NavLink>
         </li>
         <li className="nav-item">

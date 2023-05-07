@@ -1,7 +1,57 @@
-import React from 'react'
+import React, {useState} from 'react';
+import Resultats from './Resultats';
 
 
 const Prediction = () => {
+
+
+    //const [btnSelector, setBtnSelector] = useState(null);
+    const [text, setText] = useState('');
+    const [prediction, setPrediction] = useState(null);
+
+    useState(() => {
+        //setBtnSelector(document.querySelector('#btn-soumettre'));
+        //document.querySelector(btnSelector).disabled = true;
+    }, [])
+
+    const handleChange = (e) => {
+        /*if(text === '') {
+            document.querySelector(btnSelector).disabled = true;
+        }else{
+            document.querySelector(btnSelector).disabled = false;
+        }*/
+        setText(e.target.value);
+    }
+
+    const getPrediction = async () => {
+        let obj = {
+            "description": text
+        }
+
+        console.log(JSON.stringify(obj));
+
+        const query = await fetch("https://spudster.madagascar.webcup.hodi.host/webcupbackend/api/predict", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(obj)
+        });
+
+        return query;
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const res = getPrediction();
+        res
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);  
+                setPrediction(data);
+            }).catch((err) => console.log(err));
+    }
+
     return (
         <main>
             <section id='form'>
@@ -9,33 +59,18 @@ const Prediction = () => {
                 </h2>
                 <form action="">
                     <h3>Décrivez votre rêve</h3>
-                    <textarea name="" id="" cols="30" rows="10" placeholder='Écrivez ici'></textarea>
-                    <a href="" className="button">Soumettre</a>
+                    <textarea name="" 
+                    id="" 
+                    cols="30"
+                    rows="10" 
+                    placeholder='Écrivez ici' 
+                    value={text} onChange={handleChange}>
+
+                    </textarea>
+                    <button className="button" id="btn-soumettre"  onClick={handleSubmit}>Soumettre</button>
                 </form>
             </section>
-            <section id='result'>
-                <h3>Voici la prédiction de votre rêve</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facilis deleniti libero rem optio rerum modi reiciendis eum ea eius, sunt aperiam earum. Vitae, minima. Pariatur quo vel expedita suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptates quia suscipit exercitationem nam! Nihil aut doloremque unde quasi esse obcaecati quas accusantium amet, voluptatem sint adipisci maiores itaque sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis vel accusamus, sit itaque sequi aut, dignissimos beatae quod quos similique pariatur corrupti alias quas. Quae at quis molestiae enim?</p>
-                <h3>Nous vous proposons les contenus suivant basé sur la prédiction ci-dessus : </h3>
-                <div className='additional-info-container'>
-                    <article className='additional-info'>
-                        <h4>Article</h4>
-                        <div></div>
-                    </article>
-                    <article className='additional-info'>
-                        <h4>Livres</h4>
-                        <div>
-                            <a href="#" className="button">Consulter</a>
-                        </div>
-                    </article>
-                    <article className='additional-info'>
-                        <h4>Vidéos</h4>
-                        <div>
-                            <a href="#" className="button">Consulter</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
+            {prediction && <Resultats predictions={prediction.prediction} additionnal_info={prediction.additional_info}/>}
         </main>
     )
 }
