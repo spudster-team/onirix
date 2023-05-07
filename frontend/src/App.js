@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Navbar from './components/Navbar';
-import Orinix from './components/Orinix';
 import Iir from './components/IIR';
 import Prediction from './components/Prediction';
 import Contact from './components/Contact';
