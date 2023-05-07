@@ -73,7 +73,7 @@ const Prediction = () => {
                 </form>
                 {loading && 
                     <div className='loading'>
-                        <img src="/assets/loading-dot.gif" alt="loading"/>
+                        <img src="assets/loading-dot.gif" alt="loading"/>
                     </div>
                 }
             </section>
