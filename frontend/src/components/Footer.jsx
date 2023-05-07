@@ -7,7 +7,7 @@ const Footer = ({hostname}) => {
     const pathname = hostname;
 
     return (
-        <footer>
+        <footer id="#contact">
             <article>
                 <div id="logo-container">
                     <img src={pathname + "/assets/logo/logo-full-white.png"} alt="onirix_logo" className="logo" />

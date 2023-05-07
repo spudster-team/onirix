@@ -50,7 +50,7 @@ const Prediction = ({hostname}) => {
     }
 
     return (
-        <main className='prediction'>
+        <main className='prediction animate__animated animate__slideInRight'>
             <section id='form'>
                 <h2>Obtenez des prédiction prémonitoires personalisées grâce à Onirix
                 </h2>

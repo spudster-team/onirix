@@ -1,16 +1,45 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom';
 
 /**
  * TODO : remove / before image url
  */
 const Home = ({hostname}) => {
+    /**
+     * animate__animated animate__slideInRight
+     */
+    const parentRef = useRef();
+
+    useEffect(() => {
+        const onScroll = () => {
+          const element = parentRef.current;
+          const { top, bottom } = element.getBoundingClientRect();
     
+            handleScroll(top);
+          
+        };
+    
+        window.addEventListener("scroll", onScroll);
+    
+        return () => {
+          window.removeEventListener("scroll", onScroll);
+        };
+      }, []);
+
+    const handleScroll = (y) => {
+
+        if(y <= 0) {
+            document.querySelector("#testimonial").classList.remove("display-none");
+            document.querySelector("#testimonial").classList.add("animate__animated", "animate__slideInLeft");
+        }
+
+    }
+
     return (
-        <main>
+        <main ref={parentRef}>
             <section className="landing-page">
                 <article id="onirix-summary" className="summary">
-                    <div>
+                    <div className='animate__animated animate__slideInRight'>
                         <h2>Prédisez votre avenir grâce à <span>Onirix</span></h2>
                         <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre
                             provisoire
@@ -22,15 +51,15 @@ const Home = ({hostname}) => {
                         <NavLink to="/prediction" className="button">Essayer</NavLink>
                         <NavLink to="/a_propos">En savoir plus</NavLink>
                     </div>
-                    <video autoPlay muted loop className="landing-page-illustration">
+                    <video autoPlay muted loop className="landing-page-illustration animate__animated animate__slideInLeft">
                         {/* <source src='/assets/video/tunnel.mp4' type='video/mp4'></source> */}
                         <source src={hostname + '/assets/video/wormhole.mp4'} type='video/mp4'></source>
                     </video>
                     {/* <img src="#" alt="" className="landing-page-illustration" /> */}
                 </article>
                 <article id="iir-summary" className="summary">
-                    <img src={hostname + "/assets/iir.jpg"} alt="iir building" className="landing-page-illustration" />
-                    <div>
+                    <img src={hostname + "/assets/iir.jpg"} alt="iir building" className="landing-page-illustration  animate__animated animate__slideInRight" />
+                    <div className='animate__animated animate__slideInLeft'>
                         <h2>Institut International des Rêves</h2>
                         <p>
                             • Faites vivre à vos patients une expérience client structurée et personnalisée qui vous
@@ -42,7 +71,7 @@ const Home = ({hostname}) => {
                     </div>
                 </article>
             </section>
-            <section>
+            <section className="display-none" id="testimonial">
                 <h2 id='testimonial-title'>Ce que les gens disent de nous</h2>
                 <article className="testimonial">
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
