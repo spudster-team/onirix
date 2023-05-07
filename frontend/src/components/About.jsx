@@ -5,7 +5,7 @@ const About = () => {
     return (
         <main className='about'>
             <section>
-                <h1>A propos d'Onirix</h1>
+                <h1>A propos d'Onyrix</h1>
                 <article className='info info-left'>
                     <div>
                         <h2>Comment fonctionne l'algorithme ? </h2>

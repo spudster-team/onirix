@@ -74,7 +74,7 @@ const Navbar = () => {
       <ul className="navbar-nav">
         <li className={active === 0 ? "nav-item navbar-logo active" : "nav-item navbar-logo"}>
             <NavLink className={"nav-link nav-link-logo"} to="/" onClick={handleLinkClick}>
-                <span className="link-text logo-text display-none">ONIRIX</span>
+                <span className="link-text logo-text display-none">ONYRIX</span>
                 <img src="/assets/logo/logo-partial.svg" alt="logo" />
             </NavLink>
         </li>

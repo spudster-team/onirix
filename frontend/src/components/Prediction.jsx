@@ -57,7 +57,7 @@ const Prediction = () => {
     return (
         <main className='prediction'>
             <section id='form'>
-                <h2>Obtenez des prédiction prémonitoires personalisées grâce à Onirix
+                <h2>Obtenez des prédiction prémonitoires personalisées grâce à Onyrix
                 </h2>
                 <form action="">
                     <h3>Décrivez votre rêve</h3>

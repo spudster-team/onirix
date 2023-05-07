@@ -7,16 +7,16 @@ const Footer = () => {
         <footer>
             <article>
                 <div id="logo-container">
-                    <img src="/assets/logo/logo-full-white.png" alt="onirix_logo" className="logo" />
+                    <img src="/assets/logo/logo-full-white.png" alt="onyrix_logo" className="logo" />
                     <div>
-                        <h3>ONIRIX</h3>
-                        <p>Découvrez votre avenir à travers vos rêves avec Onirix, l'IA divinatoire.</p>
+                        <h3>ONYRIX</h3>
+                        <p>Découvrez votre avenir à travers vos rêves avec Onyrix, l'IA divinatoire.</p>
                     </div>
                 </div>
                 <div>
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="onirix_prediction.html">Prédiction</a></li>
+                        <li><a href="onyrix_prediction.html">Prédiction</a></li>
                         <li><NavLink to="/a_propos">À propos</NavLink></li>
                         <li><a href="/">Avis</a></li>
                     </ul>

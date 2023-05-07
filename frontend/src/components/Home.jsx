@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <main>
             <section className="landing-page">
-                <article id="onirix-summary" className="summary">
+                <article id="onyrix-summary" className="summary">
                     <div>
-                        <h2>Prédisez votre avenir grâce à <span>Onirix</span></h2>
+                        <h2>Prédisez votre avenir grâce à <span>Onyrix</span></h2>
                         <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre
                             provisoire
                             pour
