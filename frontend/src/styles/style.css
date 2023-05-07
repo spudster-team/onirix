@@ -53,14 +53,7 @@ section {
     padding: 1rem;
 }
 
-.button {
-    background-color: var(--accent-color);
-    color: var(--main-color);
-    padding: .4rem 1.7rem;
-    border-radius: .5rem;
-    display: inline-block;
-    font-weight: 500;
-}
+
 
 a {
     text-decoration: none;
