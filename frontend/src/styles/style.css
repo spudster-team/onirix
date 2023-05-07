@@ -9,6 +9,7 @@
 @import url('prediction.css');
 @import url('about.css');
 @import url('login.css');
+@import url('history.css');
 
 ::selection {
     background-color: var(--accent-color);

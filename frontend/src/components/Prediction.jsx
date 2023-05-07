@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Resultats from './Resultats';
 
 
-const Prediction = ({hostname}) => {
+const Prediction = ({ hostname }) => {
 
 
     const [disabled, setDisabled] = useState(true);
@@ -12,9 +12,9 @@ const Prediction = ({hostname}) => {
 
     const handleChange = (e) => {
         setText(e.target.value);
-        if(text === '') {
-           setDisabled(true);
-        }else{
+        if (text === '') {
+            setDisabled(true);
+        } else {
             setDisabled(false);
         }
     }
@@ -57,22 +57,64 @@ const Prediction = ({hostname}) => {
                 <form action="">
                     <h3>Décrivez votre rêve</h3>
                     <textarea name=""
-                    id="" 
-                    cols="30"
-                    rows="10" 
-                    placeholder='Écrivez ici' 
-                    value={text} onChange={handleChange}>
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder='Écrivez ici'
+                        value={text} onChange={handleChange}>
 
                     </textarea>
-                    <button className="button" id="btn-soumettre" disabled={disabled}  onClick={handleSubmit}>Soumettre</button>
+                    <button className="button" id="btn-soumettre" disabled={disabled} onClick={handleSubmit}>Soumettre</button>
                 </form>
-                {loading && 
+                {loading &&
                     <div className='loading'>
-                        <img src={ hostname + "/assets/loading-dot.gif"} alt="loading"/>
+                        <img src={hostname + "/assets/loading-dot.gif"} alt="loading" />
                     </div>
                 }
             </section>
-            {prediction && <Resultats predictions={prediction.prediction} additionnal_info={prediction.additional_info}/>}
+            {prediction && <Resultats predictions={prediction.prediction} additionnal_info={prediction.additional_info} />}
+            <section>
+                <h2>Historique</h2>
+                <div className="history-same-date">
+                    <h3>23 avril 2023</h3>
+                    <ul>
+                        <li>
+                            <bold>Dream</bold>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, magni quae praesentium adipisci eius doloremque voluptatibus, pariatur, quaerat optio quas id necessitatibus harum ducimus accusantium! Quia molestiae odit excepturi culpa!<br></br>
+                            <bold>Prediction</bold>: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ratione dolor saepe veritatis excepturi ad temporibus ducimus fugiat cumque, accusantium dolorem ex facilis quidem velit officia. Culpa vero voluptatem recusandae.
+                        </li>
+                        <li>
+                            <bold>Dream</bold>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, magni quae praesentium adipisci eius doloremque voluptatibus, pariatur, quaerat optio quas id necessitatibus harum ducimus accusantium! Quia molestiae odit excepturi culpa!<br></br>
+                            <bold>Prediction</bold>: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ratione dolor saepe veritatis excepturi ad temporibus ducimus fugiat cumque, accusantium dolorem ex facilis quidem velit officia. Culpa vero voluptatem recusandae.
+                        </li>
+                        <li>
+                            <bold>Dream</bold>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, magni quae praesentium adipisci eius doloremque voluptatibus, pariatur, quaerat optio quas id necessitatibus harum ducimus accusantium! Quia molestiae odit excepturi culpa!<br></br>
+                            <bold>Prediction</bold>: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ratione dolor saepe veritatis excepturi ad temporibus ducimus fugiat cumque, accusantium dolorem ex facilis quidem velit officia. Culpa vero voluptatem recusandae.
+                        </li>
+                    </ul>
+                </div>
+                <div className="history-same-date">
+                    <h3>22 mai 2023</h3>
+                    <ul>
+                        <li>
+                            <bold>Dream</bold>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, magni quae praesentium adipisci eius doloremque voluptatibus, pariatur, quaerat optio quas id necessitatibus harum ducimus accusantium! Quia molestiae odit excepturi culpa!<br></br>
+                            <bold>Prediction</bold>: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ratione dolor saepe veritatis excepturi ad temporibus ducimus fugiat cumque, accusantium dolorem ex facilis quidem velit officia. Culpa vero voluptatem recusandae.
+                        </li>
+                    </ul>
+                </div>
+                <div className="history-same-date">
+                    <h3>23 avril 2023</h3>
+                    <ul>
+                        <li>
+                            <bold>Dream</bold>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, magni quae praesentium adipisci eius doloremque voluptatibus, pariatur, quaerat optio quas id necessitatibus harum ducimus accusantium! Quia molestiae odit excepturi culpa!<br></br>
+                            <bold>Prediction</bold>: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ratione dolor saepe veritatis excepturi ad temporibus ducimus fugiat cumque, accusantium dolorem ex facilis quidem velit officia. Culpa vero voluptatem recusandae.
+                        </li>
+                        <li>
+                            <bold>Dream</bold>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, magni quae praesentium adipisci eius doloremque voluptatibus, pariatur, quaerat optio quas id necessitatibus harum ducimus accusantium! Quia molestiae odit excepturi culpa!<br></br>
+                            <bold>Prediction</bold>: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ratione dolor saepe veritatis excepturi ad temporibus ducimus fugiat cumque, accusantium dolorem ex facilis quidem velit officia. Culpa vero voluptatem recusandae.
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
     )
 }
