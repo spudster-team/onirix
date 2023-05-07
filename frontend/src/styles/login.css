@@ -1,6 +1,6 @@
 @import url('colors');
 
-form {
+.signin-container form {
     background-color: var(--gray);
     border-radius: 10px 0 0 10px;
     color: var(--main-color);
@@ -9,7 +9,7 @@ form {
     justify-content: center;
 }
 
-form input {
+.signin-container form input {
     box-sizing: border-box;
     margin: 1rem;
     padding: 1rem;
@@ -52,11 +52,11 @@ form input {
     width: 40%;
 }
 
-form a {
+.signin-container form a {
     color: var(--accent-color);
 }
 
-form a:hover {
+.signin-container form a:hover {
     border-bottom: 2px solid --accent-color;
 }
 
