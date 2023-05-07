@@ -64,26 +64,26 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/orinix" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/icons/predict.png" className="nav-img" alt="icon" />
             <span className="link-text display-none">Onirix</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/iir" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/icons/iir.png" className="nav-img" alt="icon" />
             <span className="link-text display-none">Institut Iternational des Rêves</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/a_propos" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
+            <img src="/assets/icons/about.svg" className="nav-img" alt="icon" />
             <span className="link-text display-none">A propos</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={"nav-link"} to="/contact" onClick={handleLinkClick}>
-            <img src="/adresse.png" className="nav-img" alt="icon" />
-            <span className="link-text display-none">contact</span>
+            <img src="/assets/icons/contact.png" className="nav-img" alt="icon" />
+            <span className="link-text display-none">Contact</span>
           </NavLink>
         </li>
       </ul>

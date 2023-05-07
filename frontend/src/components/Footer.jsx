@@ -4,7 +4,7 @@ const Footer = () => {
         <footer>
             <article>
                 <div id="logo-container">
-                    <img src="/assets/logo/logo-partial.svg" alt="onirix_logo" className="logo" />
+                    <img src="/assets/logo/logo-full-white.png" alt="onirix_logo" className="logo" />
                     <div>
                         <h3>ONIRIX</h3>
                         <p>La prédiction de votre avenir</p>

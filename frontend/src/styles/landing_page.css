@@ -47,6 +47,14 @@
     border-bottom: .3rem solid var(--accent-color);
 }
 
+video {
+    filter: grayscale(0) !important;
+}
+
+video:hover {
+    filter: grayscale(1) !important;
+}
+
 /* RESPONSIVeNESS */
 
 @media screen and (max-width: 600px) {
@@ -54,7 +62,7 @@
         flex-direction: column;
     }
 
-    .summary  div {
+    .summary div {
         order: 2;
         width: 100%;
         max-width: 100%;
@@ -72,9 +80,7 @@
         order: 1;
     }
 
-    video {
-        filter: grayscale(0) !important;
-    }
+
 
     #onirix-summary,
     #iir-summary {
