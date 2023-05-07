@@ -1,4 +1,6 @@
 # Create your models here.
+import datetime
+
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -6,6 +8,7 @@ from django.db import models
 class Dream(models.Model):
     description = models.TextField(null=False)
     prediction = models.CharField(max_length=255, null=False)
+    date = models.DateTimeField(default=datetime.datetime.now())
     id_user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 

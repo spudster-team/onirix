@@ -102,7 +102,7 @@ class DreamView(APIView):
 class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Dream
-        fields = ["description", "prediction"]
+        fields = ["description", "prediction", "date"]
 
 
 class History(APIView):
