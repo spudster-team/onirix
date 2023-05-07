@@ -6,6 +6,7 @@ const Navbar = () => {
   const [linkTextSelector, setLinkTextSelector] = useState(null);
   const [navbarSelector, setNavbarSelector] = useState(null);
   
+  
 
   useEffect(() => {
     setMainSelector(document.querySelector("#container"));
@@ -15,15 +16,12 @@ const Navbar = () => {
 
 
   const handleMouseEnter = () => {
-    console.log(window.size);
     linkTextSelector.forEach((item) => {
       item.classList.remove("display-none");
       item.classList.add("display-inline");
     });
-    if(window.outerWidth > 600) {
       navbarSelector.classList.remove("normal-width");
       navbarSelector.classList.add("max-width-hover");
-    }
     mainSelector.classList.add("blur");
   }
 
@@ -32,32 +30,26 @@ const Navbar = () => {
       item.classList.remove("display-inline");
       item.classList.add("display-none");
     });
-    if(window.outerWidth > 600) {
       navbarSelector.classList.remove("max-width-hover");
       navbarSelector.classList.add("normal-width");
-    }
     mainSelector.classList.remove("blur");
   }
 
   const handleLinkClick = () => {
-    linkTextSelector.forEach((item) => {
       linkTextSelector.forEach((item) => {
         item.classList.remove("display-inline");
         item.classList.add("display-none");
       });
-      if(window.outerWidth > 600) {
-        navbarSelector.classList.remove("max-width-hover");
-        navbarSelector.classList.add("normal-width");
-      }
+      navbarSelector.classList.remove("max-width-hover");
+      navbarSelector.classList.add("normal-width");
       mainSelector.classList.remove("blur");
-    });
   }
 
   return (
     <div className="navbar normal-width" id="navbar" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <ul className="navbar-nav">
         <li className="nav-item navbar-logo">
-            <NavLink className={"nav-link"} to="/" onClick={handleLinkClick}>
+            <NavLink className={"nav-link nav-link-logo"} to="/" onClick={handleLinkClick}>
                 <span className="link-text logo-text display-none">ONIRIX</span>
                 <img src="/assets/logo/logo-partial.svg" alt="logo" />
             </NavLink>

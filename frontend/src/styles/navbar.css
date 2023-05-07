@@ -111,9 +111,19 @@
     height: 5rem;
     box-shadow: 0 -5px 20px var(--ombre-color);
   }
+
+  .navbar:hover .nav-item {
+    height: 100%;
+  }
   
   .navbar-nav {
     flex-direction: row;
+  }
+
+  .nav-link {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 100%;
   }
 
   .navbar-logo {
@@ -121,11 +131,20 @@
     margin-bottom: 0;
   }
 
-  .navbar-logo .nav-link {
-    justify-content: center;
+  .navbar-logo {
+    height: 100%;
+    margin-bottom: 0;
   }
-  .nav-link {
+
+    .navbar:hover .nav-link {
+    height: 100%;
+    text-align: center;
+    align-items: center;
     justify-content: center;
+    margin-bottom: 0;
+  }
+  .navbar:hover .link-text {
+    display: none;
   }
   
 }

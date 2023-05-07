@@ -13,14 +13,17 @@ import Footer from './components/Footer';
 function App() {
 
   return (
+    /**
+     * TODO : addn basename='/frontend' to BrowserRouter
+     */
+    //<BrowserRouter basename='/frontend'>
     <BrowserRouter>
       <Navbar/>
       <div id="container">
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/orinix" element={<Orinix />} />
-          <Route path="/iir" element={<Iir />} />
           <Route path="/prediction" element={<Prediction />} />
+          <Route path="/iir" element={<Iir />} />
           <Route path="/a_propos" element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
