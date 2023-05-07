@@ -120,7 +120,7 @@ const Navbar = ({hostname}) => {
         </li>
         <li className={active === 4 ? "nav-item active" : "nav-item"}>
           <NavLink className={"nav-link"} to="/contact" onClick={handleLinkClick}>
-            <img src={hostname + "/assets/icons/contact-white.svg"} className="nav-img" alt="icon" />
+            <img src={`${hostname}/assets/icons/contact-white.svg`} className="nav-img" alt="icon" />
             <span className="link-text display-none">Contact</span>
           </NavLink>
         </li>

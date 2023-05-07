@@ -32,8 +32,8 @@ function App() {
       <div id="container">
         <Routes>
           <Route exact path="/" element={<Home hostname={hostname} />} />
-          <Route path="/prediction" element={<Prediction />} />
-          <Route path="/iir" element={<Iir />} />
+          <Route path="/prediction" element={<Prediction hostname={hostname} />} />
+          <Route path="/iir" element={<Iir hostname={hostname} />} />
           <Route path="/a_propos" element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
