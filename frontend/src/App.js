@@ -8,26 +8,39 @@ import Iir from './components/IIR';
 import Prediction from './components/Prediction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { useEffect, useState } from 'react';
+import Login from './components/Login';
 
 function App() {
+  const [hostname, setHostname] = useState('');
+  useEffect(() => {
+
+
+  let _hostname = window.location.href;
+  let i = _hostname.indexOf("/frontend");
+  _hostname = _hostname.substring(0, i);
+
+  setHostname(_hostname);
+
+  }, []);
 
   return (
     /**
      * TODO : addn basename='/frontend' to BrowserRouter
      */
-    //<BrowserRouter basename='/frontend'>
-    <BrowserRouter>
-      <Navbar/>
+    <BrowserRouter basename='/frontend'>
+      <Navbar hostname={hostname}/>
       <div id="container">
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/prediction" element={<Prediction />} />
-          <Route path="/iir" element={<Iir />} />
+          <Route exact path="/" element={<Home hostname={hostname} />} />
+          <Route path="/prediction" element={<Prediction hostname={hostname} />} />
+          <Route path="/iir" element={<Iir hostname={hostname} />} />
           <Route path="/a_propos" element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       
-        <Footer/>
+        <Footer hostname={hostname}/>
       </div>
     </BrowserRouter>
   );

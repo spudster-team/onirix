@@ -1,12 +1,4 @@
-@font-face {
-  font-family: "inter-regular";
-  src: url("/public/fonts/inter/Inter-Regular.ttf");
-}
 
-@font-face {
-  font-family: "Aloevera-bold";
-  src: url("/public/fonts/Aloevera-Bold.otf");
-}
 
 :root {
   --transition-speed: 600ms;
@@ -14,26 +6,7 @@
 
 *, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.prediction {
+    margin-bottom: 25vh;
+}
+
 form {
     width: 80%;
     margin-left: auto;
