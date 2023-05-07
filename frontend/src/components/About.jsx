@@ -41,10 +41,10 @@ const About = () => {
                         <h2>Comment fonctionne l'algorithme ? </h2>
                         <p>L'algorithme de prédiction des rêves est basé sur l'analyse de données massives et utilise des techniques avancées de Deep Learning pour détecter des modèles dans les rêves des utilisateurs. L'IA est capable d'extraire des informations clés à partir des rêves, comme les émotions, les thèmes récurrents et les symboles, qui sont ensuite utilisés pour générer des prédictions sur l'avenir. Ces prédictions peuvent concerner des événements spécifiques, des tendances générales ou même des comportements individuels.</p>
                     </div>
-                    <img src="/assets/abstract_patterns/ap2.png" alt="sdfds" />
+                    <img src="assets/abstract_patterns/ap2.png" alt="sdfds" />
                 </article>
                 <article className='info info-right animate__animated animate__slideInLeft'>
-                    <img src="/assets/abstract_patterns/ap3.png" alt="cx" />
+                    <img src="assets/abstract_patterns/ap3.png" alt="cx" />
                     <div>
                         <h2>Les préoccupations éthiques et la confidentialité des données
                         </h2>
@@ -58,10 +58,10 @@ const About = () => {
                         </h2>
                         <p>Malgré les préoccupations éthiques et de confidentialité des données, l'IA de prédiction des rêves est une technologie en pleine expansion avec de nombreuses applications potentielles dans des domaines tels que la médecine, les affaires et les loisirs. À l'avenir, il est possible que nous voyions une utilisation accrue de cette technologie et son intégration dans nos vies quotidiennes.</p>
                     </div>
-                    <img src="/assets/abstract_patterns/ap4.png" alt="sdjfjkd" />
+                    <img src="assets/abstract_patterns/ap4.png" alt="sdjfjkd" />
                 </article>
                 <article className='info info-right'>
-                    <img src="/assets/abstract_patterns/ap5.png" id="img-fiable" className='display-none' alt="sdfsd" />
+                    <img src="assets/abstract_patterns/ap5.png" id="img-fiable" className='display-none' alt="sdfsd" />
                     <div className='display-none' id="fiable">
                         <h2>Fiabilité du prédiction</h2>
                         <p>Bien que l'IA soit capable de prédire l'avenir en utilisant des rêves, la fiabilité de ces prédictions est encore incertaine. Les rêves sont souvent difficiles à interpréter, même pour les experts en psychologie, et peuvent varier considérablement d'une personne à l'autre. De plus, l'avenir est souvent imprévisible et peut être influencé par de nombreux facteurs différents. Il est donc important de prendre ces prédictions avec précaution et de les considérer comme des hypothèses plutôt que des faits.</p>

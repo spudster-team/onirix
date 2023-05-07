@@ -65,12 +65,12 @@ const Prediction = () => {
                 <p>Voici quelques recommendations (appuyez sur les numéros pour effectuer un appel): </p>
                 <div className='doctors'>
                     <article className='doctor-tile'>
-                        <img className='doctor-img' src="/assets/pub/doct0.png" alt="doctor" />
-                        <a href="tel:+261000000000"><img className='doctor-info' src="/assets/pub/doct-info0.svg" alt="doctor info" /></a>
+                        <img className='doctor-img' src="assets/pub/doct0.png" alt="doctor" />
+                        <a href="tel:+261000000000"><img className='doctor-info' src="assets/pub/doct-info0.svg" alt="doctor info" /></a>
                     </article>
                     <article className='doctor-tile'>
-                        <img className='doctor-img' src="/assets/pub/doct1.png" alt="doctor" />
-                        <a href="tel:+261000000000"><img className='doctor-info' src="/assets/pub/doct-info1.svg" alt="doctor info" /></a>
+                        <img className='doctor-img' src="assets/pub/doct1.png" alt="doctor" />
+                        <a href="tel:+261000000000"><img className='doctor-info' src="assets/pub/doct-info1.svg" alt="doctor info" /></a>
                     </article>
                 </div>
             </div>
@@ -91,7 +91,7 @@ const Prediction = () => {
                 </form>
                 {loading &&
                     <div className='loading'>
-                        <img src={"/assets/loading-dot.gif"} alt="loading" />
+                        <img src={"assets/loading-dot.gif"} alt="loading" />
                     </div>
                 }
             </section>

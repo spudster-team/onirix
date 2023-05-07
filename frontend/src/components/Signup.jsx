@@ -19,7 +19,7 @@ const Login = () => {
                     <p><a href="">Se connecter</a></p>
                 </form>
                 <div className="signup-form-decoration">
-                    <img src="/assets/logo/logo-full-white.png" alt="" />
+                    <img src="assets/logo/logo-full-white.png" alt="" />
                 </div>
             </section>
         </main>

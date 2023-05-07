@@ -53,12 +53,12 @@ const Home = () => {
                     </div>
                     <video autoPlay muted loop className="landing-page-illustration animate__animated animate__slideInLeft">
                         {/* <source src='/assets/video/tunnel.mp4' type='video/mp4'></source> */}
-                        <source src={'/assets/video/wormhole.mp4'} type='video/mp4'></source>
+                        <source src={'assets/video/wormhole.mp4'} type='video/mp4'></source>
                     </video>
                     {/* <img src="#" alt="" className="landing-page-illustration" /> */}
                 </article>
                 <article id="iir-summary" className="summary">
-                    <img src={"/assets/iir.jpg"} alt="iir building" className="landing-page-illustration  animate__animated animate__slideInRight" />
+                    <img src={"assets/iir.jpg"} alt="iir building" className="landing-page-illustration  animate__animated animate__slideInRight" />
                     <div className='animate__animated animate__slideInLeft'>
                         <h2>Institut International des Rêves</h2>
                         <p>
@@ -77,20 +77,20 @@ const Home = () => {
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
-                    <div><img src={"/assets/man1.jpg"} alt="user" /><span className="testimonial-username">John Wick</span>
+                    <div><img src={"assets/man1.jpg"} alt="user" /><span className="testimonial-username">John Wick</span>
                     </div>
                 </article>
                 <article className="testimonial">
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
-                    <div><img src={"/assets/man2.jpg"} alt="" /><span className="testimonial-username">John Wick</span></div>
+                    <div><img src={"assets/man2.jpg"} alt="" /><span className="testimonial-username">John Wick</span></div>
                 </article>
                 <article className="testimonial">
                     <p className="testimonial-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, corrupti
                         eveniet excepturi ipsam quam dolorem molestias ratione alias distinctio, deserunt error sunt
                         voluptates, officiis quasi earum id aspernatur consectetur quidem!</p>
-                    <div><img src={"/assets/woman1.jpg"} alt="" /><span className="testimonial-username">John Wick</span></div>
+                    <div><img src={"assets/woman1.jpg"} alt="" /><span className="testimonial-username">John Wick</span></div>
                 </article>
                 <p></p>
                 <h2>Comment ça marche</h2>

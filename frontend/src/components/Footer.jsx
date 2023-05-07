@@ -9,7 +9,7 @@ const Footer = () => {
         <footer id="#contact">
             <article>
                 <div id="logo-container">
-                    <img src={"/assets/logo/logo-full-white.png"} alt="oniryx_logo" className="logo" />
+                    <img src={"assets/logo/logo-full-white.png"} alt="oniryx_logo" className="logo" />
                     <div>
                         <h3>ONYRIX</h3>
                         <p>Découvrez votre avenir à travers vos rêves avec Onyrix, l'IA divinatoire.</p>
@@ -26,8 +26,8 @@ const Footer = () => {
                 <div>
                     <h3>Contacts</h3>
                     <ul className="contact-list">
-                        <li><a href="tel:+261000000000"><img className="icon" src={"/assets/icons/phone.png"} alt=""/>+261 00 000 00</a></li>
-                        <li><a href="mailto:gtsierenana@gmail.com"><img className='icon' alt="icon-footer" src={ "/assets/icons/mail.png"} /> onixir.mail.co</a></li>
+                        <li><a href="tel:+261000000000"><img className="icon" src={"assets/icons/phone.png"} alt=""/>+261 00 000 00</a></li>
+                        <li><a href="mailto:gtsierenana@gmail.com"><img className='icon' alt="icon-footer" src={ "assets/icons/mail.png"} /> onixir.mail.co</a></li>
                     </ul>
                 </div>
             </article>

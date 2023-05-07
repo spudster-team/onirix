@@ -5,7 +5,7 @@ const Login = () => {
         <main>
             <section className="signin-container">
                 <form action="">
-                    <img class='small-screen-logo' src="/assets/logo/logo-partial.svg" alt="" hidden/>
+                    <img class='small-screen-logo' src="assets/logo/logo-partial.svg" alt="" hidden/>
                     <hgroup>
                         <h2>Se connecter</h2>
                         <p>Bienvenu sur Onyrix</p>
@@ -18,7 +18,7 @@ const Login = () => {
                     <p><a href="">Créer un compte</a></p>
                 </form>
                 <div className="form-decoration">
-                    <img src="/assets/logo/logo-full-white.png" alt="" />
+                    <img src="assets/logo/logo-full-white.png" alt="" />
                 </div>
             </section>
         </main>
