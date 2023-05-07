@@ -1,3 +1,6 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
@@ -14,8 +17,8 @@ const Footer = () => {
                     <h3>Services</h3>
                     <ul>
                         <li><a href="onirix_prediction.html">Prédiction</a></li>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Avis</a></li>
+                        <li><NavLink to="/a_propos">À propos</NavLink></li>
+                        <li><a href="/">Avis</a></li>
                     </ul>
                 </div>
                 <div>

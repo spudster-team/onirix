@@ -67,6 +67,17 @@ textarea:focus {
     justify-content: center;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.loading img {
+    width: 30vh;
+}
+
 @media screen and (max-width: 600px) {
     .additional-info-container {
         /* flex-direction: column; */

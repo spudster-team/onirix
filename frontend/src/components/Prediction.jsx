@@ -8,6 +8,7 @@ const Prediction = () => {
     //const [btnSelector, setBtnSelector] = useState(null);
     const [text, setText] = useState('');
     const [prediction, setPrediction] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     useState(() => {
         //setBtnSelector(document.querySelector('#btn-soumettre'));
@@ -42,12 +43,13 @@ const Prediction = () => {
     }
 
     const handleSubmit = (e) => {
+        setLoading(true);
         e.preventDefault();
         const res = getPrediction();
         res
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);  
+                setLoading(false);
                 setPrediction(data);
             }).catch((err) => console.log(err));
     }
@@ -69,6 +71,11 @@ const Prediction = () => {
                     </textarea>
                     <button className="button" id="btn-soumettre"  onClick={handleSubmit}>Soumettre</button>
                 </form>
+                {loading && 
+                    <div className='loading'>
+                        <img src="/assets/loading-dot.gif" alt="loading"/>
+                    </div>
+                }
             </section>
             {prediction && <Resultats predictions={prediction.prediction} additionnal_info={prediction.additional_info}/>}
         </main>

@@ -30,6 +30,7 @@ const Resultats = ({predictions, additionnal_info}) => {
                                 </article>
                             );
                         }
+                        return null;
                     })}
                 </div>
             </section>
