@@ -57,10 +57,22 @@ const Prediction = () => {
         <main className='prediction'>
             <div className='pub' id="pub">
                 <div className="close-button" onClick={closePub}>&times;</div>
-                <p>Attention, Onyrix ne peut prédire l'avenir en se basant sur des cauchemars. Ces derniers sont
+           
+                <h2>Attention</h2>
+                <p>Onyrix ne peut prédire l'avenir en se basant sur des cauchemars. Ces derniers sont
                     considérés comme des troubles psychologiques et l'Institut International des Rêves recommende d'aller voir un professionel.
                 </p>
-                <p>Voici quelques recommendations : </p>
+                <p>Voici quelques recommendations (appuyez sur les numéros pour effectuer un appel): </p>
+                <div className='doctors'>
+                    <article className='doctor-tile'>
+                        <img className='doctor-img' src="/assets/pub/doct0.png" alt="doctor" />
+                        <a href="tel:+261000000000"><img className='doctor-info' src="/assets/pub/doct-info0.svg" alt="doctor info" /></a>
+                    </article>
+                    <article className='doctor-tile'>
+                        <img className='doctor-img' src="/assets/pub/doct1.png" alt="doctor" />
+                        <a href="tel:+261000000000"><img className='doctor-info' src="/assets/pub/doct-info1.svg" alt="doctor info" /></a>
+                    </article>
+                </div>
             </div>
             <section id='form'>
                 <h2>Obtenez des prédiction prémonitoires personalisées grâce à Onyrix
